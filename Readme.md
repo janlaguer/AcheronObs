@@ -15,7 +15,7 @@ Only a bandaid until Riot releases a better way to do this (local telemetry data
 - java -jar acheron_overlay.jar
 
 You need to create a 'config.json' file, see AcheronObs.py to see what's needed in this file.
-Don't forget to install the requirements.
+Don't forget to install the requirements listed in AcheronObs.py.
 
 You can access the HUD at localhost:PORT/overlay and the Dashboard at localhost:PORT/dashboard.
 
