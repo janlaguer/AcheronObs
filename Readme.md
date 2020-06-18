@@ -18,12 +18,12 @@ Only a bandaid until Riot releases a better way to do this (local telemetry data
 Don't forget to install the required libraries listed in AcheronObs.py aswell as Tesseract OCR.**
 
 You can access the HUD at localhost:PORT/overlay and the Dashboard at localhost:PORT/dashboard.
+The API is accessible at localhost:PORT/api/123.
 Default port is 6543.
 
 It requires OBS Virtual Cam. Launch OBS, add Virtual Cam filter to the game capture and start the camera before AcheronObs.
 
 It requires the second observer to stand in a black corner of the map to work accurately. 
-
 
 ## More screenshots
 
