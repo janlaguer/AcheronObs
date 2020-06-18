@@ -14,12 +14,15 @@ Only a bandaid until Riot releases a better way to do this (local telemetry data
 - python AcheronObs.py
 - java -jar acheron_overlay.jar
 
-You need to create a 'config.json' file, see AcheronObs.py to see what's needed in this file.
-Don't forget to install the requirements listed in AcheronObs.py.
+**You need to create a 'config.json' file, see AcheronObs.py to see what's needed in this file.
+Don't forget to install the required libraries listed in AcheronObs.py aswell as Tesseract OCR.**
 
 You can access the HUD at localhost:PORT/overlay and the Dashboard at localhost:PORT/dashboard.
+Default port is 6543.
 
-It requires OBS Virtual Cam. Launch OBS and start the camera before AcheronObs.
+It requires OBS Virtual Cam. Launch OBS, add Virtual Cam filter to the game capture and start the camera before AcheronObs.
+
+It requires the second observer to stand in a black corner of the map to work accurately. 
 
 
 ## More screenshots
