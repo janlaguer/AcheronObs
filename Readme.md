@@ -34,9 +34,6 @@ It requires the second observer to stand in a black corner of the map to work ac
 ![Screenshot](3.JPG "Screenshot")
 
 
-## Support the project
-If you use it in a professional setting it's always appreciated, I also can provide support if you plan on doing so.
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XYYFJQKB5JGHJ&source=url)
+Not for commercial use, contact me if you're interested in using it commercialy. https://twitter.com/aAa_pechz
 
 
