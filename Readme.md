@@ -25,6 +25,9 @@ It's a work in progress, if you wanna help feel free to contact me ! (frontend d
 - If it doesn't work check that OBS' virtual camera is camera_index 0 (it may not be if you have additionals webcams installed). If that's the case you need to edit backend/ressource/config.json ("camera_index").
 - Other issues ? Contact me with details.
 
+## Todo
+- Add scoreboard cv (weapons, money...) ?
+
 ## Contact & License
 - julian.libercedeville@gmail.com
 - https://twitter.com/aAa_pechz
