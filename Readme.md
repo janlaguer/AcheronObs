@@ -1,43 +1,66 @@
 # Acheron
 [![volkswagen status](https://auchenberg.github.io/volkswagen/volkswargen_ci.svg?v=1)](https://github.com/auchenberg/volkswagen)
 
-This product is aimed at improving the viewing experience in Valorant by providing data that can be used to create a custom HUD that can be integrated to a live broadcast.
+Acheron provides an API that can be used to create an observer HUD for the game Valorant.
 
-It is using computer vision to gather information on the game (hp of the players, round time, and scores).
-
-Only a bandaid until Riot releases a better way to do this (local telemetry data, game API, spectator API...)
-
-## Example
-![Screenshot](2.JPG "Screenshot")
+It's a work in progress, if you wanna help feel free to contact me ! (frontend dev especially)
 
 ## Running Acheron
-- python AcheronObs.py
-- java -jar acheron_overlay.jar
+- pip install -r requirements.txt
+- Install the latest build of Tesseract (https://github.com/UB-Mannheim/tesseract/wiki)
+- Install OBS (https://github.com/obsproject/obs-studio)
+- Install OBS Virtual camera (https://obsproject.com/forum/resources/obs-virtualcam.949/)
+- Make a new scene on OBS with a game capture and activate the virtual camera output.
+- You must position yourself so that the top of the game HUD is a black portion of the map (go under the map) like in the following screenshot :
+![Alt text](screenshots/positionning.png?raw=true "Positionning")
+- You can also use one of the provided screenshots (see the screenshots folder) for testing.
+- python main.py to start the API server
+- Navigate to http://localhost:8000/docs/ for the documentation
+- get_match is the main endpoint and returns a json formatted response that you can use on your frontend.
+- You can use edit_match to edit the match (team names, player names...)
 
-**You need to create a 'config.json' file, see AcheronObs.py to see what's needed in this file.
-Don't forget to install the required libraries listed in AcheronObs.py aswell as Tesseract OCR.**
+## Troubleshooting
+- If it doesn't work check that OBS' virtual camera is camera_index 0 (it may not be if you have additionals webcams installed). If that's the case you need to edit backend/ressource/config.json ("camera_index").
+- Other issues ? Contact me with details.
 
-You can access the HUD at localhost:PORT/overlay and the Dashboard at localhost:PORT/dashboard.
-The API is accessible at localhost:PORT/api/123.
-Default port is 6543.
+## Contact & License
+- julian.libercedeville@gmail.com
+- https://twitter.com/aAa_pechz
 
-It requires OBS Virtual Cam. Launch OBS, add Virtual Cam filter to the game capture and start the camera before AcheronObs.
-
-It requires the second observer to stand in a black corner of the map to work accurately. 
-
-## More screenshots
-
-![Screenshot](4.JPG "Screenshot")
-
-![Screenshot](5.JPG "Screenshot")
-
-![Screenshot](3.JPG "Screenshot")
-
-
-Not for commercial use, contact me if you're interested in using it commercialy. https://twitter.com/aAa_pechz
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
 
 Images are property of their respective owners.
+
 Riot Games does not endorse or sponsor this project.
+
+## Exemple json response (get_match)
+```json
+{
+  "id": 0,
+  "map": "string",
+  "spike_status": true,
+  "teams": [
+    {
+      "id": 0,
+      "full_name": "string",
+      "short_name": "string",
+      "logo": "string",
+      "players": [
+        {
+          "id": 0,
+          "real_name": "string",
+          "display_name": "string",
+          "country": "string",
+          "portrait": "string",
+          "agent": "undefined",
+          "hp": 100,
+          "ultimate_up": false
+        }
+      ],
+      "game_score": 0,
+      "map_score": 0
+    }
+  ]
+}
+```
 
