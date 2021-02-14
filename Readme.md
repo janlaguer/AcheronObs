@@ -12,7 +12,9 @@ It's a work in progress, if you wanna help feel free to contact me ! (frontend d
 - Install OBS Virtual camera (https://obsproject.com/forum/resources/obs-virtualcam.949/)
 - Make a new scene on OBS with a game capture and activate the virtual camera output.
 - You must position yourself so that the top of the game HUD is a black portion of the map (go under the map) like in the following screenshot :
+
 ![Alt text](screenshots/positionning.png?raw=true "Positionning")
+
 - You can also use one of the provided screenshots (see the screenshots folder) for testing.
 - python main.py to start the API server
 - Navigate to http://localhost:8000/docs/ for the documentation
