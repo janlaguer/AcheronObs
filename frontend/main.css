@@ -1,6 +1,104 @@
-box {
-    width: 300px;
-    border: 15px solid green;
-    padding: 50px;
-    margin: 20px;
+body {
+    background-color: rgba(0, 0, 0, 0.1) !important; 
+    margin: 0px auto; 
+}
+
+.headerbox {
+    width:853px;
+    height:135px;
+    position:absolute;
+    top:20px;
+    left:534px;
+    color:white;
+    background-color: #161a26;
+}
+
+.roundbox {
+    width:147px;
+    height:22px;
+    position:absolute;
+    top:148px;
+    left:892px;
+    color:black;
+    background-color: white;
+}
+
+.box {
+    width: 234px;
+    height: 76px;
+    color: white;
+    background-color:#161a26;
+}
+
+#boxl1 {
+    position:absolute;
+    top:634px;
+    left:22px;
+}
+
+#boxl2 {
+    position:absolute;
+    top:720px;
+    left:22px;
+}
+
+#boxl3 {
+    position:absolute;
+    top:805px;
+    left:22px;
+}
+
+#boxl4 {
+    position:absolute;
+    top:891px;
+    left:22px;
+}
+
+#boxl5 {
+    position:absolute;
+    top:976px;
+    left:22px;
+}
+
+#boxr1 {
+    position:absolute;
+    top:634px;
+    left:1663px;
+}
+
+#boxr2 {
+    position:absolute;
+    top:720px;
+    left:1663px;
+}
+
+#boxr3 {
+    position:absolute;
+    top:805px;
+    left:1663px;
+}
+
+#boxr4 {
+    position:absolute;
+    top:891px;
+    left:1663px;
+}
+
+#boxr5 {
+    position:absolute;
+    top:976px;
+    left:1663px;
+}
+
+.charimg {
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+
+.playername {
+    position:absolute;
+    top:2px;
+    left:35%;
+    font-size:120%;
 }
