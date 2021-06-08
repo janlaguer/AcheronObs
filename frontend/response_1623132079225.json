@@ -1,0 +1,127 @@
+{
+  "id": 1,
+  "map": null,
+  "spike_status": false,
+  "teams": [
+    {
+      "id": 0,
+      "full_name": "Team 0",
+      "short_name": "TM0",
+      "logo": null,
+      "players": [
+        {
+          "id": 0,
+          "real_name": "Player 0",
+          "display_name": "Player 0",
+          "country": null,
+          "portrait": null,
+          "agent": "undefined",
+          "hp": 0,
+          "ultimate_up": false
+        },
+        {
+          "id": 1,
+          "real_name": "Player 1",
+          "display_name": "Player 1",
+          "country": null,
+          "portrait": null,
+          "agent": "undefined",
+          "hp": 0,
+          "ultimate_up": false
+        },
+        {
+          "id": 2,
+          "real_name": "Player 2",
+          "display_name": "Player 2",
+          "country": null,
+          "portrait": null,
+          "agent": "undefined",
+          "hp": 0,
+          "ultimate_up": false
+        },
+        {
+          "id": 3,
+          "real_name": "Player 3",
+          "display_name": "Player 3",
+          "country": null,
+          "portrait": null,
+          "agent": "undefined",
+          "hp": 0,
+          "ultimate_up": false
+        },
+        {
+          "id": 4,
+          "real_name": "Player 4",
+          "display_name": "Player 4",
+          "country": null,
+          "portrait": null,
+          "agent": "undefined",
+          "hp": 100,
+          "ultimate_up": true
+        }
+      ],
+      "game_score": "0",
+      "map_score": 0
+    },
+    {
+      "id": 1,
+      "full_name": "Team 1",
+      "short_name": "TM1",
+      "logo": null,
+      "players": [
+        {
+          "id": 0,
+          "real_name": "Player 0",
+          "display_name": "Player 0",
+          "country": null,
+          "portrait": null,
+          "agent": "undefined",
+          "hp": 0,
+          "ultimate_up": true
+        },
+        {
+          "id": 1,
+          "real_name": "Player 1",
+          "display_name": "Player 1",
+          "country": null,
+          "portrait": null,
+          "agent": "undefined",
+          "hp": 0,
+          "ultimate_up": false
+        },
+        {
+          "id": 2,
+          "real_name": "Player 2",
+          "display_name": "Player 2",
+          "country": null,
+          "portrait": null,
+          "agent": "undefined",
+          "hp": 0,
+          "ultimate_up": false
+        },
+        {
+          "id": 3,
+          "real_name": "Player 3",
+          "display_name": "Player 3",
+          "country": null,
+          "portrait": null,
+          "agent": "undefined",
+          "hp": 0,
+          "ultimate_up": false
+        },
+        {
+          "id": 4,
+          "real_name": "Player 4",
+          "display_name": "Player 4",
+          "country": null,
+          "portrait": null,
+          "agent": "undefined",
+          "hp": 0,
+          "ultimate_up": false
+        }
+      ],
+      "game_score": "2",
+      "map_score": 0
+    }
+  ]
+}
