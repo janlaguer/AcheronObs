@@ -3,6 +3,27 @@ body {
     margin: 0px auto; 
 }
 
+h1 {
+    font-family:'Oswald', sans-serif;
+    font-weight:700;
+    font-size:400%;
+    color: #ECECEC;
+}
+
+h2 {
+    font-family:'Oswald', sans-serif;
+    font-weight:600;
+    font-size:150%;
+    color: #ECECEC;
+}
+
+h3 {
+    font-family:'Oswald', sans-serif;
+    font-weight:700;
+    font-size:120%;
+    color: #ECECEC;
+}
+
 .headerbox {
     width:853px;
     height:135px;
@@ -11,10 +32,6 @@ body {
     left:534px;
     color:white;
     background-color: #161a26;
-}
-
-.score {
-    font-size:400%;
 }
 
 .topcharimg {
@@ -75,7 +92,7 @@ body {
     position:absolute;
     top:148px;
     left:892px;
-    color:black;
+    color:#161a26;
     background-color: white;
 }
 
@@ -147,7 +164,6 @@ body {
     position:absolute;
     top:2px;
     left:35%;
-    font-size:120%;
 }
 
 .rcharimg {
@@ -160,5 +176,4 @@ body {
     position:absolute;
     top:2px;
     right:35%;
-    font-size:120%;
 }

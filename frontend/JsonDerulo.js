@@ -14,7 +14,7 @@ function updatePlayers(json) {
 function updateRound(json) {
     const num1 = parseInt(json.teams[0].game_score, 10)
     const num2 = parseInt(json.teams[1].game_score, 10)
-    document.getElementById('roundCount').innerHTML = `Round ${num1 + num2 + 1}`
+    document.getElementById('roundCount').innerHTML = `ROUND ${num1 + num2 + 1}`
 }
 
 getMain().then(response => {
