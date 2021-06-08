@@ -56,14 +56,14 @@ async def get_score(team, cap) -> str:
 
 
 if __name__ == '__main__':
-    xcap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
-    xcap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
-    xcap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
-
     import json
 
     with open('../ressource/config.json') as config_file:
         settings = json.load(config_file)
+
+    xcap = cv2.VideoCapture(settings['camera_index'], cv2.CAP_DSHOW)
+    xcap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+    xcap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
     import asyncio
 

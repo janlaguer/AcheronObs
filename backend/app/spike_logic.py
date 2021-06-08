@@ -36,7 +36,12 @@ async def is_spike_planted(cap):
     return Spike
 
 if __name__ == '__main__':
-    xcap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    import json
+
+    with open('../ressource/config.json') as config_file:
+        settings = json.load(config_file)
+
+    xcap = cv2.VideoCapture(settings['camera_index'], cv2.CAP_DSHOW)
     xcap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
     xcap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
