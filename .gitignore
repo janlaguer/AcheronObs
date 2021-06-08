@@ -1,3 +1,3 @@
 /venv/
 .idea
-backend/ressource/config.json
+git rm --cached backend/ressource/config.json
