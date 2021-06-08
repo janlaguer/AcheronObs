@@ -13,6 +13,62 @@ body {
     background-color: #161a26;
 }
 
+.score {
+    font-size:400%;
+}
+
+.topcharimg {
+    width:54px;
+    height:auto;
+    position:absolute;
+    top:39px;
+}
+
+#lcharimg1 {
+    left:17px;
+}
+
+#lcharimg2 {
+    left:78px;
+}
+
+#lcharimg3 {
+    left:139px;
+}
+
+#lcharimg4 {
+    left:200px;
+}
+
+#lcharimg5 {
+    left:261px;
+}
+
+#rcharimg1 {
+    right:17px;
+}
+
+#rcharimg2 {
+    right:78px;
+}
+
+#rcharimg3 {
+    right:139px;
+}
+
+#rcharimg4 {
+    right:200px;
+}
+
+#rcharimg5 {
+    right:261px;
+}
+
+.dead {
+    opacity: 70%;
+    filter:grayscale(60%);
+}
+
 .roundbox {
     width:147px;
     height:22px;
@@ -26,79 +82,83 @@ body {
 .box {
     width: 234px;
     height: 76px;
+    position:absolute;
     color: white;
     background-color:#161a26;
 }
 
 #boxl1 {
-    position:absolute;
     top:634px;
     left:22px;
 }
 
 #boxl2 {
-    position:absolute;
     top:720px;
     left:22px;
 }
 
 #boxl3 {
-    position:absolute;
     top:805px;
     left:22px;
 }
 
 #boxl4 {
-    position:absolute;
     top:891px;
     left:22px;
 }
 
 #boxl5 {
-    position:absolute;
     top:976px;
     left:22px;
 }
 
 #boxr1 {
-    position:absolute;
     top:634px;
     left:1663px;
 }
 
 #boxr2 {
-    position:absolute;
     top:720px;
     left:1663px;
 }
 
 #boxr3 {
-    position:absolute;
     top:805px;
     left:1663px;
 }
 
 #boxr4 {
-    position:absolute;
     top:891px;
     left:1663px;
 }
 
 #boxr5 {
-    position:absolute;
     top:976px;
     left:1663px;
 }
 
-.charimg {
+.lcharimg {
     position:absolute;
     top:0px;
     left:0px;
 }
 
-.playername {
+.lplayername {
     position:absolute;
     top:2px;
     left:35%;
+    font-size:120%;
+}
+
+.rcharimg {
+    position:absolute;
+    top:0px;
+    right:0px;
+}
+
+.rplayername {
+    position:absolute;
+    top:2px;
+    right:35%;
     font-size:120%;
 }

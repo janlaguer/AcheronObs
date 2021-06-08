@@ -10,42 +10,58 @@
         <script src="JsonDerulo.js"></script>
     </head>
     <body style = "background-image: url('test_image1.png');" style = "background-size: 1920px 1080px;">
-
         
-        <box class="headerbox">hello</box>
+        <box class="headerbox d-flex justify-content-center">
+
+            <h3 class="score text-center align-self-center me-4">1</h3>
+            <h3 class="text-center align-self-center">01:30</h3>
+            <h3 class="score text-center align-self-center ms-4">1</h3>
+
+            <img class="topcharimg" id="lcharimg1" src="squiddy.jpg">
+            <img class="topcharimg dead" id="lcharimg2" src="squiddy.jpg">
+            <img class="topcharimg" id="lcharimg3" src="squiddy.jpg">
+            <img class="topcharimg" id="lcharimg4" src="squiddy.jpg">
+            <img class="topcharimg" id="lcharimg5" src="squiddy.jpg">
+
+            <img class="topcharimg" id="rcharimg1" src="squiddy.jpg">
+            <img class="topcharimg" id="rcharimg2" src="squiddy.jpg">
+            <img class="topcharimg" id="rcharimg3" src="squiddy.jpg">
+            <img class="topcharimg" id="rcharimg4" src="squiddy.jpg">
+            <img class="topcharimg" id="rcharimg5" src="squiddy.jpg">
+        </box>
         <box class="roundbox text-center">
-            <p id="roundCount"></p>
+            <p id="roundCount">ROUND 1</p>
         </box>
 
         <div id = "leftboxes">
             <box class="box" id="boxl1"> 
                 <div class="position-relative">
-                    <img class="charimg" src="squiddy.jpg" width="32%" height="auto">
-                    <h3 class="playername" id = 't0p0'>SUNKENPRIDE</h3>
+                    <img class="lcharimg" src="squiddy.jpg" width="32%" height="auto">
+                    <h3 class="lplayername" id = 't0p0'>SUNKENPRIDE</h3>
                 </div>
             </box>
-            <box class="box" id="boxl2"> 
+            <box class="box dead" id="boxl2"> 
                 <div class="position-relative">
-                    <img class="charimg" src="squiddy.jpg" width="32%" height="auto">
-                    <h3 class="playername" id = 't0p1'>SUNKENPRIDE</h3>
+                    <img class="lcharimg" src="squiddy.jpg" width="32%" height="auto">
+                    <h3 class="lplayername" id = 't0p1'>SUNKENPRIDE</h3>
                 </div>
             </box>
             <box class="box" id="boxl3">
                 <div class="position-relative">
-                    <img class="charimg" src="squiddy.jpg" width="32%" height="auto">
-                    <h3 class="playername" id = 't0p2'>SUNKENPRIDE</h3>
+                    <img class="lcharimg" src="squiddy.jpg" width="32%" height="auto">
+                    <h3 class="lplayername" id = 't0p2'>SUNKENPRIDE</h3>
                 </div>
             </box>
             <box class="box" id="boxl4">
                 <div class="position-relative">
-                    <img class="charimg" src="squiddy.jpg" width="32%" height="auto">
-                    <h3 class="playername" id = 't0p3'>SUNKENPRIDE</h3>
+                    <img class="lcharimg" src="squiddy.jpg" width="32%" height="auto">
+                    <h3 class="lplayername" id = 't0p3'>SUNKENPRIDE</h3>
                 </div>
             </box>
             <box class="box" id="boxl5"> 
                 <div class="position-relative">
-                    <img class="charimg" src="squiddy.jpg" width="32%" height="auto">
-                    <h3 class="playername" id = 't0p4'>SUNKENPRIDE</h3>
+                    <img class="lcharimg" src="squiddy.jpg" width="32%" height="auto">
+                    <h3 class="lplayername" id = 't0p4'>SUNKENPRIDE</h3>
                 </div>
             </box>
         </div>
@@ -53,32 +69,32 @@
         <div id = "rightboxes">
             <box class="box" id="boxr1">
                 <div class="position-relative">
-                    <img class="charimg" src="squiddy.jpg" width="32%" height="auto">
-                    <h3 class="playername" id = 't1p0'>ISSAFEZ</h3>
+                    <img class="rcharimg" src="squiddy.jpg" width="32%" height="auto">
+                    <h3 class="rplayername" id = 't1p0'>ISSAFEZ</h3>
                 </div>
             </box>
             <box class="box" id="boxr2">
                 <div class="position-relative">
-                    <img class="charimg" src="squiddy.jpg" width="32%" height="auto">
-                    <h3 class="playername" id = 't1p1'>ISSAFEZ</h3>
+                    <img class="rcharimg" src="squiddy.jpg" width="32%" height="auto">
+                    <h3 class="rplayername" id = 't1p1'>ISSAFEZ</h3>
                 </div>
             </box>
             <box class="box" id="boxr3">
                 <div class="position-relative">
-                    <img class="charimg" src="squiddy.jpg" width="32%" height="auto">
-                    <h3 class="playername" id = 't1p2'>ISSAFEZ</h3>
+                    <img class="rcharimg" src="squiddy.jpg" width="32%" height="auto">
+                    <h3 class="rplayername" id = 't1p2'>ISSAFEZ</h3>
                 </div>
             </box>
             <box class="box" id="boxr4">
                 <div class="position-relative">
-                    <img class="charimg" src="squiddy.jpg" width="32%" height="auto">
-                    <h3 class="playername" id = 't1p3'>ISSAFEZ</h3>
+                    <img class="rcharimg" src="squiddy.jpg" width="32%" height="auto">
+                    <h3 class="rplayername" id = 't1p3'>ISSAFEZ</h3>
                 </div>
             </box>
             <box class="box" id="boxr5">
                 <div class="position-relative">
-                    <img class="charimg" src="squiddy.jpg" width="32%" height="auto">
-                    <h3 class="playername" id = 't1p4'>ISSAFEZ</h3>
+                    <img class="rcharimg" src="squiddy.jpg" width="32%" height="auto">
+                    <h3 class="rplayername" id = 't1p4'>ISSAFEZ</h3>
                 </div>
             </box>
         </div>
