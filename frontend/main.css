@@ -248,7 +248,7 @@ h3 {
 
 .progress {
     position:relative;
-    top:76px;
+    top:45px;
     height:10px;
 }
 
@@ -256,6 +256,27 @@ h3 {
     background-color: #5baa95;
 }
 
+.defenders-text {
+    color: #5baa95;
+}
+
 .attackers {
     background-color: #d85d56;
+}
+
+.attackers-text {
+    color: #d85d56;
+}
+
+.health {
+    position:relative;
+    top:50px;
+}
+
+.health-left {
+    right:5px;
+}
+
+.health-right {
+    left: 5px;
 }
