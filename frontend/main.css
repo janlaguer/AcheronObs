@@ -245,3 +245,17 @@ h3 {
     position: relative;
     bottom: 2.5px;
 }
+
+.progress {
+    position:relative;
+    top:76px;
+    height:10px;
+}
+
+.defenders {
+    background-color: #5baa95;
+}
+
+.attackers {
+    background-color: #d85d56;
+}
