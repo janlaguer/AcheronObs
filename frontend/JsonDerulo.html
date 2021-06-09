@@ -13,28 +13,39 @@
 
         <script src="JsonDerulo.js"></script>
     </head>
-    <body style = "background-image: url('test_image1.png');" style = "background-size: 1920px 1080px;">
+    <body style = "background-image: url('test_observer1.png');" style = "background-size: 1920px 1080px;">
         
-        <box class="headerbox d-flex justify-content-center">
-
-            <h1 class="text-center align-self-center me-4" id='t0score'>1</h1>
-            <h2 class="text-center align-self-center" id="timer">01:30</h2>
-            <h1 class="text-center align-self-center ms-4" id='t1score'>1</h1>
-
+        <box class="lheaderbox d-flex justify-content-center">
+            <img class="teamlogo text-start" id="lteamlogo" src="test_team0logo.png"> 
             <img class="topcharimg" id="lcharimg1" src="squiddy.jpg">
             <img class="topcharimg dead" id="lcharimg2" src="squiddy.jpg">
             <img class="topcharimg" id="lcharimg3" src="squiddy.jpg">
             <img class="topcharimg" id="lcharimg4" src="squiddy.jpg">
             <img class="topcharimg" id="lcharimg5" src="squiddy.jpg">
+        </box>
+        <box id="team0_name_box">
+            <h3 class="text-start ms-3 pb-2"id="team0_name">ROCK</h3>
+        </box>
 
+        <box class="rheaderbox d-flex justify-content-center">
+            <img class="teamlogo" id="rteamlogo" src="test_team1logo.png"> 
             <img class="topcharimg" id="rcharimg1" src="squiddy.jpg">
             <img class="topcharimg" id="rcharimg2" src="squiddy.jpg">
             <img class="topcharimg" id="rcharimg3" src="squiddy.jpg">
             <img class="topcharimg" id="rcharimg4" src="squiddy.jpg">
             <img class="topcharimg" id="rcharimg5" src="squiddy.jpg">
+
+        </box>
+        <box id="team1_name_box">
+            <h3 class="text-end me-3 pb-2"id="team1_name">GRU</h3>
+        </box>
+
+        <box id="score_box">
+            <h1 id="team0_score" style="position:absolute;top:-64px;left:-35px;">12</h1>
+            <h1 id="team1_score" style="position:absolute;top:-64px;right:-35px;">12</h1>
         </box>
         <box class="roundbox text-center">
-            <h3 id="roundCount" style="color:#161a26">ROUND 1</h3>
+            <h3 id="roundCount" style="color:#161a26; position:relative;bottom:2.5px;">ROUND 1</h3>
         </box>
 
         <div id = "leftboxes">

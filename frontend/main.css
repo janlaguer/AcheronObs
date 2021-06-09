@@ -6,7 +6,7 @@ body {
 h1 {
     font-family:'Oswald', sans-serif;
     font-weight:700;
-    font-size:400%;
+    font-size:55px;
     color: #ECECEC;
 }
 
@@ -24,21 +24,51 @@ h3 {
     color: #ECECEC;
 }
 
-.headerbox {
-    width:853px;
-    height:135px;
+.lheaderbox {
+    width:358px;
+    height:94px;
     position:absolute;
-    top:20px;
-    left:534px;
+    top:0px;
+    left:533px;
     color:white;
-    background-color: #161a26;
+    background-color: #0f1923;
+}
+
+.rheaderbox {
+    width:358px;
+    height:94px;
+    position:absolute;
+    top:0px;
+    left:1029px;
+    color:white;
+    background-color: #0f1923;
+}
+
+#team0_name_box {
+    width:160px;
+    height:22px;
+    position:absolute;
+    top:87px;
+    left:533px;
+    color:white;
+    background-color: #5baa95;
+}
+
+#team1_name_box {
+    width:160px;
+    height:22px;
+    position:absolute;
+    top:87px;
+    left:1227px;
+    color:white;
+    background-color: #d85d56;
 }
 
 .topcharimg {
-    width:54px;
+    width:50px;
     height:auto;
     position:absolute;
-    top:39px;
+    top:20px;
 }
 
 #lcharimg1 {
@@ -86,12 +116,22 @@ h3 {
     filter:grayscale(60%);
 }
 
+#score_box {
+    width:139px;
+    height:23px;
+    position:absolute;
+    top:71px;
+    left:890px;
+    color:white;
+    background-color: #0f1923;
+}
+
 .roundbox {
     width:147px;
     height:22px;
     position:absolute;
-    top:148px;
-    left:892px;
+    top:87px;
+    left:886px;
     color:#161a26;
     background-color: white;
 }
@@ -101,7 +141,7 @@ h3 {
     height: 76px;
     position:absolute;
     color: white;
-    background-color:#161a26;
+    background-color:#0f1923;
 }
 
 #boxl1 {
@@ -176,4 +216,32 @@ h3 {
     position:absolute;
     top:2px;
     right:35%;
+}
+
+#lteamlogo {
+    max-height:94px;
+    width: auto;
+    opacity:15%;
+    position:absolute;
+    top: 0px;
+    left:0px;
+}
+
+#rteamlogo {
+    max-height:94px;
+    width: auto;
+    opacity:15%;
+    position: absolute;
+    top:0px;
+    right:0px;
+}
+
+#team0_name {
+    position: relative;
+    bottom: 2.5px;
+}
+
+#team1_name {
+    position: relative;
+    bottom: 2.5px;
 }
