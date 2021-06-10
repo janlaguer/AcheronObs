@@ -1,5 +1,5 @@
 function getMain () {
-    return fetch('response_1623132079225.json')
+    return fetch('https://8lr09u.deta.dev/api/match/get_match/')
 }
 
 function updatePlayers(json) {
