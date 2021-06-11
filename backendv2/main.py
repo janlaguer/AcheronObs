@@ -53,8 +53,8 @@ def get_match():
     return match
 
 while True:
-    # posts every 3 seconds to deta api server
+    # posts every 1 seconds to deta api server
     payload = get_match()
     r = requests.post('https://8lr09u.deta.dev/api/match/edit_match/', json=payload)
-    print(r)
-    time.sleep(3)
+    print(f'POST result: {r}')
+    time.sleep(1)
