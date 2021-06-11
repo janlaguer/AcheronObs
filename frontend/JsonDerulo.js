@@ -21,6 +21,14 @@ function updateRound(json) {
     document.getElementById('roundCount').innerHTML = `ROUND ${num1 + num2 + 1}`
 }
 
+function spikePlanted() {
+    document.querySelector('.spike').id = 'planted';
+}
+
+function spikeReset() {
+    document.querySelector('div').removeAttribute('id');
+}
+
 getMain().then(response => {
     return response.json();
 }).then(response => {

@@ -15,39 +15,36 @@
     </head>
     <body style = "background-image: url('test_observer1.png');" style = "background-size: 1920px 1080px;">
         
+        <button class="btn btn-primary" onclick="spikePlanted()"> click me</button>
+        <button class="btn btn-primary" onclick="spikeReset()"> Reset</button>
+        <!--top HUD-->
+        <box class ="lheaderbox_side"></box>
         <box class="lheaderbox d-flex justify-content-center">
-            <img class="teamlogo text-start" id="lteamlogo" src="test_team0logo.png"> 
-            <img class="topcharimg" id="lcharimg1" src="squiddy.jpg">
-            <img class="topcharimg dead" id="lcharimg2" src="squiddy.jpg">
-            <img class="topcharimg" id="lcharimg3" src="squiddy.jpg">
-            <img class="topcharimg" id="lcharimg4" src="squiddy.jpg">
-            <img class="topcharimg" id="lcharimg5" src="squiddy.jpg">
-        </box>
-        <box id="team0_name_box">
-            <h3 class="text-start ms-3 pb-2"id="team0_name">ROCK</h3>
+            <div class="lheader_background"></div>
+            <div id="attackers_line"></div>
+            <h2 id="team0_name">ROCK</h2>
+            <img class="teamlogo" id="lteamlogo" src="test_team0logo.png"> 
         </box>
 
+        <box class ="rheaderbox_side"></box>
         <box class="rheaderbox d-flex justify-content-center">
+            <div class="rheader_background"></div>
             <img class="teamlogo" id="rteamlogo" src="test_team1logo.png"> 
-            <img class="topcharimg" id="rcharimg1" src="squiddy.jpg">
-            <img class="topcharimg" id="rcharimg2" src="squiddy.jpg">
-            <img class="topcharimg" id="rcharimg3" src="squiddy.jpg">
-            <img class="topcharimg" id="rcharimg4" src="squiddy.jpg">
-            <img class="topcharimg" id="rcharimg5" src="squiddy.jpg">
-
-        </box>
-        <box id="team1_name_box">
-            <h3 class="text-end me-3 pb-2"id="team1_name">GRU</h3>
+            <h2 id="team1_name">GRU</h2>
         </box>
 
         <box id="score_box">
-            <h1 id="team0_score" style="position:absolute;top:-64px;left:-35px;">12</h1>
-            <h1 id="team1_score" style="position:absolute;top:-64px;right:-35px;">12</h1>
-        </box>
-        <box class="roundbox text-center">
-            <h3 id="roundCount" style="color:#161a26; position:relative;bottom:2.5px;">ROUND 1</h3>
+            <h1 id="team0_score" style="position:absolute;top:-67px;left:-45px;">12</h1>
+            <h1 id="team1_score" style="position:absolute;top:-67px;right:-45px;">12</h1>
         </box>
 
+        <box class=" d-flex justify-content-center" id="round_box">
+            <h3 id="roundCount">ROUND 12</h3>
+        </box>
+
+        <img class="spike" src="spike.png">
+        
+        <!--side HUDs-->
         <div id = "leftboxes">
             <box class="box" id="boxl1"> 
                 <div class="position-relative">

@@ -25,23 +25,82 @@ h3 {
 }
 
 .lheaderbox {
-    width:358px;
-    height:94px;
+    width:260px;
+    height:74px;
     position:absolute;
     top:0px;
-    left:533px;
+    left:632px;
     color:white;
     background-color: #0f1923;
+    border-radius: 0px 0px 0px 51px;
+}
+
+.lheader_background {
+    width:260px;
+    background-image: url('test_team0logo.png');
+    background-size:170px;
+    background-position:70% 50%;
+    background-repeat:no-repeat;
+    opacity:15%;
+}
+.attackers_line {
+    background:linear-gradient(45deg,#ffffff 49%,white 50%,#ffffff 51%);
 }
 
 .rheaderbox {
-    width:358px;
-    height:94px;
+    width:260px;
+    height:74px;
     position:absolute;
     top:0px;
     left:1029px;
     color:white;
     background-color: #0f1923;
+    border-radius: 0px 0px 51px 0px
+}
+
+.rheader_background {
+    width:260px;
+    background-image: url('test_team1logo.png');
+    background-size:170px;
+    background-position:30% 50%;
+    background-repeat:no-repeat;
+    opacity:15%;
+}
+
+.lheaderbox_side {
+    width:88px;
+    height:0px;
+    position:absolute;
+    border-top: 59px solid #0f1923;
+	border-left: 55px solid transparent;
+    top:0px;
+    left:592px;
+    color:white;
+}
+
+.rheaderbox_side {
+    width:302px;
+    height:0px;
+    border-top: 57px solid #0f1923;
+	border-right: 55px solid transparent;
+    position:absolute;
+    top:0px;
+    left:1029px;
+    color:white;
+}
+
+#round_box {
+    position:absolute;
+    left:924px;
+    top:7px;
+    width:72px;
+    height:9px;
+}
+
+#roundCount {
+    color:#ECECEC;
+    letter-spacing:2px;
+    font-size:80%;
 }
 
 #team0_name_box {
@@ -64,51 +123,23 @@ h3 {
     background-color: #d85d56;
 }
 
-.topcharimg {
-    width:50px;
-    height:auto;
+.spike {
+    width: 52px;
+    height: auto;
     position:absolute;
-    top:20px;
+    top:80px;
+    left:934px;
+    ;
 }
 
-#lcharimg1 {
-    left:17px;
-}
-
-#lcharimg2 {
-    left:78px;
-}
-
-#lcharimg3 {
-    left:139px;
-}
-
-#lcharimg4 {
-    left:200px;
-}
-
-#lcharimg5 {
-    left:261px;
-}
-
-#rcharimg1 {
-    right:17px;
-}
-
-#rcharimg2 {
-    right:78px;
-}
-
-#rcharimg3 {
-    right:139px;
-}
-
-#rcharimg4 {
-    right:200px;
-}
-
-#rcharimg5 {
-    right:261px;
+#planted {
+    width: 78px;
+    height: auto;
+    position:absolute;
+    top:28px;
+    left:921px;
+    filter:invert(51%) sepia(81%) saturate(502%) hue-rotate(314deg) brightness(84%) contrast(100%);
+    transition: width 1s, height 1s, top 1s, left 1s;
 }
 
 .dead {
@@ -118,22 +149,12 @@ h3 {
 
 #score_box {
     width:139px;
-    height:23px;
+    height:3px;
     position:absolute;
     top:71px;
     left:890px;
     color:white;
     background-color: #0f1923;
-}
-
-.roundbox {
-    width:147px;
-    height:22px;
-    position:absolute;
-    top:87px;
-    left:886px;
-    color:#161a26;
-    background-color: white;
 }
 
 .box {
@@ -219,31 +240,33 @@ h3 {
 }
 
 #lteamlogo {
-    max-height:94px;
+    max-height:60px;
     width: auto;
-    opacity:15%;
-    position:absolute;
-    top: 0px;
-    left:0px;
+    position: absolute;
+    top: 50%;
+    left: 66%;
+    transform: translate(-66%, -50%);
 }
 
 #rteamlogo {
-    max-height:94px;
+    max-height:60px;
     width: auto;
-    opacity:15%;
     position: absolute;
-    top:0px;
-    right:0px;
+    top: 50%;
+    right: 66%;
+    transform: translate(66%, -50%);
 }
 
 #team0_name {
-    position: relative;
-    bottom: 2.5px;
+    position: absolute;
+    top:23px;
+    left:66px;
 }
 
 #team1_name {
-    position: relative;
-    bottom: 2.5px;
+    position: absolute;
+    top:23px;
+    right:66px;
 }
 
 .progress {
