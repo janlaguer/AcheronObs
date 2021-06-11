@@ -21,19 +21,24 @@ function updateRound(json) {
     document.getElementById('roundCount').innerHTML = `ROUND ${num1 + num2 + 1}`
 }
 
-function spikePlanted() {
-    document.querySelector('.spike').id = 'planted';
+function updateSpike(json) {
+    if (json.spike_status == true) {
+        document.querySelector('.spike').id = 'planted';
+    } else {
+        document.querySelector('.spike').removeAttribute('id');
+    }
 }
 
-function spikeReset() {
-    document.querySelector('div').removeAttribute('id');
+function mainLoop() {
+    getMain().then(response => {
+        return response.json();
+    }).then(response => {
+        updateRound(response);
+        updateSpike(response);
+        updatePlayers(response);
+    }).catch(error => {
+        console.log(error)
+    })
 }
 
-getMain().then(response => {
-    return response.json();
-}).then(response => {
-    updateRound(response);
-    updatePlayers(response);
-}).catch(error => {
-    console.log(error)
-})
+var main = setInterval(mainLoop, 1000)
