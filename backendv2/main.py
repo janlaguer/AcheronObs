@@ -1,6 +1,7 @@
 import json
 import requests
 import cv2
+import time
 import hp_logic
 import spike_logic
 import ultimate_logic
@@ -51,6 +52,9 @@ def get_match():
         match['teams'][1]['players'][i]['hp'] = hp_logic.get_healthpercent(settings['team_2'][f'player_{i}_position'], cap)
     return match
 
-payload = get_match()
-r = requests.post('https://8lr09u.deta.dev/api/match/edit_match/', json=payload)
-print(r)
+while True:
+    # posts every 3 seconds to deta api server
+    payload = get_match()
+    r = requests.post('https://8lr09u.deta.dev/api/match/edit_match/', json=payload)
+    print(r)
+    time.sleep(3)
