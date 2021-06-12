@@ -1,4 +1,6 @@
 import json
+from starlette.middleware import Middleware
+from starlette.middleware.cors import CORSMiddleware
 
 from fastapi import FastAPI
 import cv2
@@ -12,7 +14,11 @@ from .score_logic import get_score
 with open('ressource/config.json') as config_file:
     settings = json.load(config_file)
 
-app = FastAPI()
+middleware = [
+    Middleware(CORSMiddleware, allow_origins=['*'], allow_credentials=True, allow_methods=['*'], allow_headers=['*'])
+]
+
+app = FastAPI(middleware=middleware)
 cap = cv2.VideoCapture(settings['camera_index'], cv2.CAP_DSHOW)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
