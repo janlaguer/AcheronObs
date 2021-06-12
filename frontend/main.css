@@ -199,7 +199,7 @@ h3 {
     height: 76px;
     position:absolute;
     color: white;
-    background-color:#0f1923;
+    background-color:rgba(15, 25, 35, 0.9);
 }
 
 #boxl1 {
@@ -253,6 +253,8 @@ h3 {
 }
 
 .lcharimg {
+    max-height:76px;
+    width:auto;
     position:absolute;
     top:0px;
     left:0px;
@@ -260,11 +262,15 @@ h3 {
 
 .lplayername {
     position:absolute;
-    top:2px;
-    left:35%;
+    top:0px;
+    left:76px;
+    font-size:21px;
+    line-height:31px;
 }
 
 .rcharimg {
+    max-height:76px;
+    width:auto;
     position:absolute;
     top:0px;
     right:0px;
@@ -272,8 +278,10 @@ h3 {
 
 .rplayername {
     position:absolute;
-    top:2px;
-    right:35%;
+    top:0px;
+    right:76px;
+    font-size:21px;
+    line-height:31px;
 }
 
 #lteamlogo {
@@ -308,36 +316,67 @@ h3 {
 
 .progress {
     position:relative;
+    border-radius:0px;
     top:45px;
-    height:10px;
-    background-color: #424243;
+    height:31px;
+    width:158px;
+    background-color: #0f1923;
+}
+
+.progress-defenders {
+    left:76px;
 }
 
 .defenders {
     background-color: #5baa95;
 }
 
-.defenders-text {
-    color: #5baa95;
-}
-
 .attackers {
     background-color: #d85d56;
 }
 
-.attackers-text {
-    color: #d85d56;
-}
-
-.health {
-    position:relative;
+.shield {
+    width:20px;
+    height:auto;
+    position:absolute;
     top:50px;
 }
 
+.shield-left {
+    left:165px;
+}
+
+.shield-right {
+    right:165px;
+}
+
+.shield-text {
+    position:absolute;
+    top:52px;
+    font-size:10px;
+    line-height:14.82px;
+    text-align:center;
+}
+
+.shield-text-left {
+    left:170px;
+}
+
+.shield-text-right {
+    right:170px;
+}
+
+.health {
+    font-size:25px;
+    position: absolute;
+    top:40px;
+    line-height:38px;
+}
+
 .health-left {
-    right:5px;
+    left: 189px;
 }
 
 .health-right {
-    left: 5px;
+    right: 189px;
 }
