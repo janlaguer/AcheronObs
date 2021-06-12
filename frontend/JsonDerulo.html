@@ -13,37 +13,39 @@
 
         <script src="JsonDerulo.js"></script>
     </head>
-    <!-- style = "background-image: url('test_observer1.png');" style = "background-size: 1920px 1080px;" -->
-    <body>
+    <body style = "background-image: url('test_observer1.png');" style = "background-size: 1920px 1080px;">
         
-        <!-- <button class="btn btn-primary" onclick="spikePlanted()"> click me</button>
-        <button class="btn btn-primary" onclick="spikeReset()"> Reset</button> -->
+        <button class="btn btn-primary" onclick="idk()"> click me</button>
+        <button class="btn btn-primary" onclick="test()"> Reset</button>
         <!--top HUD-->
         <box class ="lheaderbox_side"></box>
         <box class="lheaderbox d-flex justify-content-center">
             <div class="lheader_background"></div>
-            <div id="attackers_line"></div>
             <h2 id="team0_name">ROCK</h2>
             <img class="teamlogo" id="lteamlogo" src="test_team0logo.png"> 
+            <div class="divider" id="defenders_line"></div>
         </box>
 
         <box class ="rheaderbox_side"></box>
         <box class="rheaderbox d-flex justify-content-center">
             <div class="rheader_background"></div>
+            <div class="divider" id="attackers_line"></div>
             <img class="teamlogo" id="rteamlogo" src="test_team1logo.png"> 
             <h2 id="team1_name">GRU</h2>
         </box>
 
-        <box id="score_box">
-            <h1 id="team0_score" style="position:absolute;top:-67px;left:-45px;">12</h1>
-            <h1 id="team1_score" style="position:absolute;top:-67px;right:-45px;">12</h1>
+        <box class="mid_box"></box>
+        <box class="score_box">
+            <h1 id="team0_score" style="position:absolute;top:-67px;left:-60px;">12</h1>
+            <h1 id="team1_score" style="position:absolute;top:-67px;right:-60px;">12</h1>
         </box>
-
+ 
         <box class=" d-flex justify-content-center" id="round_box">
             <h3 id="roundCount">ROUND 12</h3>
         </box>
 
         <img class="spike" src="spike.png">
+        
         
         <!--side HUDs-->
         <div id = "leftboxes">

@@ -43,6 +43,25 @@ h3 {
     background-repeat:no-repeat;
     opacity:15%;
 }
+
+.divider {
+    width: 2px;
+    height: 64.5px;
+    position: absolute;
+    top:4px;
+    border-radius: 25px;
+}
+
+#defenders_line {
+    background-color:#d85d56;
+    right:-5px;
+}
+
+#attackers_line {
+    background-color:#5baa95;
+    left:-5px;
+}
+
 .attackers_line {
     background:linear-gradient(45deg,#ffffff 49%,white 50%,#ffffff 51%);
 }
@@ -147,7 +166,7 @@ h3 {
     filter:grayscale(60%);
 }
 
-#score_box {
+.score_box {
     width:139px;
     height:3px;
     position:absolute;
@@ -155,6 +174,24 @@ h3 {
     left:890px;
     color:white;
     background-color: #0f1923;
+}
+
+.mid_box {
+    width:88px;
+    height:3px;
+    position:absolute;
+    top:71px;
+    left:916px;
+    color:white;
+    background-color: #0f1923;
+    transition:height 1s, top 1s;
+}
+
+#hide_timer {
+    top:28px;
+    position:absolute;
+    height:46px;
+    transition:height 1s, top 1s;
 }
 
 .box {

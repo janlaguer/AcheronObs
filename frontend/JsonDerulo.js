@@ -1,5 +1,5 @@
 function getMain () {
-    return fetch('https://8lr09u.deta.dev/api/match/get_match/')
+    return fetch('http://26.227.230.60:8000/api/match/get_match')
 }
 
 function updatePlayers(json) {
@@ -24,9 +24,21 @@ function updateRound(json) {
 function updateSpike(json) {
     if (json.spike_status == true) {
         document.querySelector('.spike').id = 'planted';
+        document.querySelector('.mid_box').id = 'hide_timer';
     } else {
         document.querySelector('.spike').removeAttribute('id');
+        document.querySelector('.mid_box').removeAttribute('id');
     }
+}
+
+function idk() {
+    document.querySelector('.spike').id = 'planted';
+    document.querySelector('.mid_box').id = 'hide_timer';
+}
+
+function test() { 
+    document.querySelector('.spike').removeAttribute('id');
+    document.querySelector('.mid_box').removeAttribute('id');
 }
 
 function mainLoop() {
