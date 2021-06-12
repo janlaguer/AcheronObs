@@ -31,16 +31,6 @@ function updateSpike(json) {
     }
 }
 
-function idk() {
-    document.querySelector('.spike').id = 'planted';
-    document.querySelector('.mid_box').id = 'hide_timer';
-}
-
-function test() { 
-    document.querySelector('.spike').removeAttribute('id');
-    document.querySelector('.mid_box').removeAttribute('id');
-}
-
 function mainLoop() {
     getMain().then(response => {
         return response.json();
