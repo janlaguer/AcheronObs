@@ -9,11 +9,24 @@ function updatePlayers(json) {
             document.getElementById(`t${x}p${i}`).innerText = json.teams[x].players[i].display_name.toUpperCase()
             document.getElementById(`t${x}p${i}hp`).innerText = json.teams[x].players[i].hp
             document.getElementById(`t${x}p${i}hpbar`).style.width = `${json.teams[x].players[i].hp}%`
-			var box = document.getElementById(`t${x}p${i}hpbar`)
-			if(json.teams[x].players[i].hp == 0)
+			
+			//left team boxes
+			var box
+			if (x == 0){
+				box = document.getElementById(`boxl${i+1}`)
+			}
+			else{
+				box = document.getElementById(`boxr${i+1}`)
+			}
+			
+			//if dead
+			if (json.teams[x].players[i].hp == 0){
 				box.classList.add("dead")
-			else	
+			}
+			//if not deat
+			else{
 				box.classList.remove("dead")
+			}
         }
     }
 }
