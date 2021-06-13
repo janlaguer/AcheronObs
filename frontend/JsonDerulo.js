@@ -9,6 +9,11 @@ function updatePlayers(json) {
             document.getElementById(`t${x}p${i}`).innerText = json.teams[x].players[i].display_name.toUpperCase()
             document.getElementById(`t${x}p${i}hp`).innerText = json.teams[x].players[i].hp
             document.getElementById(`t${x}p${i}hpbar`).style.width = `${json.teams[x].players[i].hp}%`
+			var box = document.getElementById(`t${x}p${i}hpbar`)
+			if(json.teams[x].players[i].hp == 0)
+				box.classList.add("dead")
+			else	
+				box.classList.remove("dead")
         }
     }
 }
