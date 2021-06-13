@@ -19,7 +19,18 @@ def crop_healthbar(left, cap):
 def get_healthpercent(player, cap):
     healthBar = crop_healthbar(player, cap)
     maxvalue = 76
-
+    
+    #uwu over here jj
+    #maxvalue = 50
+    
+    #width = 100
+    #height = healthBar.shape[0] # keep original height
+    #dim = (width, height)
+    
+    #healthBar = cv2.resize(healthBar, dim, interpolation = cv2.INTER_AREA)
+    
+    print(healthBar.shape)
+    
     mask_white = cv2.inRange(healthBar, np.array([240, 240, 240]), np.array([255, 255, 255]))
     mask_red = cv2.inRange(healthBar, np.array([0, 0, 0]), np.array([250, 100, 110]))
 
