@@ -52,19 +52,25 @@ h3 {
     border-radius: 25px;
 }
 
-#defenders_line {
-    background-color:#d85d56;
+#team0_line {
     right:-5px;
 }
 
-#attackers_line {
-    background-color:#5baa95;
+#team1_line {
     left:-5px;
 }
 
-.attackers_line {
-    background:linear-gradient(45deg,#ffffff 49%,white 50%,#ffffff 51%);
+.defenders_line {
+    background-color: #5baa95
 }
+
+.attackers_line {
+    background-color: #d85d56;
+}
+
+/* .attackers_line {
+    background:linear-gradient(45deg,#ffffff 49%,white 50%,#ffffff 51%);
+} */
 
 .rheaderbox {
     width:260px;

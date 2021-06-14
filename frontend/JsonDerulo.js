@@ -38,6 +38,50 @@ function updateRound(json) {
     document.getElementById('team0_score').innerHTML = num1
     document.getElementById('team1_score').innerHTML = num2
     document.getElementById('roundCount').innerHTML = `ROUND ${num1 + num2 + 1}`
+
+    if (num1 + num2 >= 13) {
+        // get bool if team0 and team1 has specific classes
+        var team0HasClass = $('#team0_line').hasClass('attackers_line');
+        var team1HasClass = $('#team1_line').hasClass('defenders_line');
+
+        // change background colors
+        document.querySelectorAll('.defenders').forEach(elem =>{
+            elem.style.backgroundColor = '#d85d56';
+        })
+        document.querySelectorAll('.attackers').forEach(elem =>{
+            elem.style.backgroundColor = '#5baa95';
+        })
+
+        if (!team0HasClass) {
+            document.getElementById('team0_line').classList.remove("defenders_line")
+            document.getElementById('team0_line').classList.add("attackers_line")
+        }
+        if (!team1HasClass) {
+            document.getElementById('team1_line').classList.remove("attackers_line")
+            document.getElementById('team1_line').classList.add("defenders_line")
+        }
+    } else {
+        // get bool if team0 and team1 has specific classes
+        var team0HasClass = $('#team0_line').hasClass('defenders_line');
+        var team1HasClass = $('#team1_line').hasClass('attackers_line');
+
+        // change background colors
+        document.querySelectorAll('.defenders').forEach(elem =>{
+            elem.style.backgroundColor = '#5baa95';
+        })
+        document.querySelectorAll('.attackers').forEach(elem =>{
+            elem.style.backgroundColor = '#d85d56';
+        })
+
+        if (!team0HasClass) {
+            document.getElementById('team0_line').classList.remove("attackers_line")
+            document.getElementById('team0_line').classList.add("defenders_line")
+        }
+        if (!team1HasClass) {
+            document.getElementById('team1_line').classList.remove("defenders_line")
+            document.getElementById('team1_line').classList.add("attackers_line")
+        }
+    }
 }
 
 function updateSpike(json) {
