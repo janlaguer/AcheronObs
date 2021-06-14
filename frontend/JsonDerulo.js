@@ -6,9 +6,10 @@ function updatePlayers(json) {
     for (var x = 0; x <2; x++) {
         for (var i = 0; i <= 4; i++) {
             // console.log(json.teams[0].players[i])
-            document.getElementById(`t${x}p${i}`).innerText = json.teams[x].players[i].display_name.toUpperCase()
+            document.getElementById(`t${x}p${i}`).innerText = json.teams[x].players[i].display_name
             document.getElementById(`t${x}p${i}hp`).innerText = json.teams[x].players[i].hp
             document.getElementById(`t${x}p${i}hpbar`).style.width = `${json.teams[x].players[i].hp}%`
+            document.getElementById(`t${x}p${i}agent`).src = `static/${json.teams[x].players[i].agent.charAt(0).toUpperCase()}${json.teams[x].players[i].agent.slice(1)}.png`
 			
 			//left team boxes
 			var box
