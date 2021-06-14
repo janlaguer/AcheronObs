@@ -14,6 +14,9 @@ from .score_logic import get_score
 with open('ressource/config.json') as config_file:
     settings = json.load(config_file)
 
+with open('ressource/match.json') as matchconfig:
+    match = json.load(matchconfig)
+
 middleware = [
     Middleware(CORSMiddleware, allow_origins=['*'], allow_credentials=True, allow_methods=['*'], allow_headers=['*'])
 ]
@@ -25,11 +28,13 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
 match = Match(id=1, spike_status=False,
               teams=[{'id': i,
-                      'full_name': f'Team {i}',
-                      'short_name': f'TM{i}',
-                      'players': [{'id': i,
-                                   'real_name': f'Player {i}',
-                                   'display_name': f'Player {i}'} for i in range(0, 5)]
+                      'full_name': f'{match[f"team{i}"]["full_name"]}',
+                      'short_name': f'{match[f"team{i}"]["short_name"]}',
+                      'logo': f'{match[f"team{i}"]["logo"]}',
+                      'players': [{'id': x,
+                                   'real_name': f'Player {x}',
+                                   'agent': f'{match[f"team{i}"][f"player{x}"]["agent"]}',
+                                   'display_name': f'{match[f"team{i}"][f"player{x}"]["gamename"]}'} for x in range(0, 5)]
                       } for i in range(0, 2)]
               )
 

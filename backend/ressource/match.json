@@ -1,0 +1,52 @@
+{
+    "team0": {
+        "full_name": "Maui the Rock Johnson",
+        "short_name": "Rock",
+        "logo": "rock.png",
+        "player0": {
+            "gamename": "issafez",
+            "agent": "viper"
+        },
+        "player1": {
+            "gamename": "SunkenPride",
+            "agent": "cypher"
+        },
+        "player2": {
+            "gamename": "Intruds",
+            "agent": "skye"
+        },
+        "player3": {
+            "gamename": "Drop Out Candy",
+            "agent": "brimstone"
+        },
+        "player4": {
+            "gamename": "jimjalabeans",
+            "agent": "sova"
+        }
+    },
+    "team1" :{
+        "full_name": "Kirby",
+        "short_name": "Gru",
+        "logo": "gru.png",
+        "player0": {
+            "gamename": "Fecchi",
+            "agent": "omen"
+        },
+        "player1": {
+            "gamename": "Yung Mask",
+            "agent": "astra"
+        },
+        "player2": {
+            "gamename": "icepop",
+            "agent": "skye"
+        },
+        "player3": {
+            "gamename": "Lil Abraham",
+            "agent": "phoenix"
+        },
+        "player4": {
+            "gamename": "Deveroxn",
+            "agent": "jett"
+        }
+    }
+}

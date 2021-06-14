@@ -1,18 +1,18 @@
 {
   "camera_index": 2,
   "team_1": {
-    "player_0_position": 447,
-    "player_1_position": 513,
+    "player_4_position": 447,
+    "player_3_position": 513,
     "player_2_position": 579,
-    "player_3_position": 645,
-    "player_4_position": 711
+    "player_1_position": 645,
+    "player_0_position": 711
   },
   "team_2": {
-    "player_0_position": 1172,
-    "player_1_position": 1238,
+    "player_4_position": 1172,
+    "player_3_position": 1238,
     "player_2_position": 1304,
-    "player_3_position": 1370,
-    "player_4_position": 1436
+    "player_1_position": 1370,
+    "player_0_position": 1436
   },
   "score_left_position": 808,
   "score_right_position": 1090
