@@ -37,7 +37,7 @@ h3 {
 
 .lheader_background {
     width:260px;
-    background-image: url('test_team0logo.png');
+    background-image: url('static/teamlogos/rock.png');
     background-size:170px;
     background-position:70% 50%;
     background-repeat:no-repeat;
@@ -85,7 +85,7 @@ h3 {
 
 .rheader_background {
     width:260px;
-    background-image: url('test_team1logo.png');
+    background-image: url('static/teamlogos/gru.png');
     background-size:170px;
     background-position:30% 50%;
     background-repeat:no-repeat;

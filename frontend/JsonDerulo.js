@@ -32,6 +32,18 @@ function updatePlayers(json) {
     }
 }
 
+function updateLogo(json) {
+    for (var x = 0; x<2; x++) {
+        if (x == 0) {
+            i = 'l'
+        } else {
+            i = 'r'
+        }
+        document.getElementById(`${i}teamlogo`).src = `static/teamlogos/${json.teams[x].logo}`
+        document.getElementById(`${i}teambg`).src = `static/teamlogos/${json.teams[x].logo}`
+    }
+}
+
 function updateRound(json) {
     const num1 = parseInt(json.teams[0].game_score, 10)
     const num2 = parseInt(json.teams[1].game_score, 10)
@@ -98,6 +110,7 @@ function mainLoop() {
     getMain().then(response => {
         return response.json();
     }).then(response => {
+        updateLogo(response);
         updateRound(response);
         updateSpike(response);
         updatePlayers(response);

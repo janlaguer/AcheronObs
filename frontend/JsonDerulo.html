@@ -14,22 +14,23 @@
         <script src="JsonDerulo.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
-    <body style = "background-image: url('test_observer1.png');" style = "background-size: 1920px 1080px;">
+    <!-- style = "background-image: url('static/testbg/test_observer1.png');" style = "background-size: 1920px 1080px;" -->
+    <body>
         
         <!--top HUD-->
         <box class ="lheaderbox_side"></box>
         <box class="lheaderbox d-flex justify-content-center">
-            <div class="lheader_background"></div>
+            <div class="lheader_background" id = "lteambg"></div>
             <h2 id="team0_name">ROCK</h2>
-            <img class="teamlogo" id="lteamlogo" src="test_team0logo.png"> 
+            <img class="teamlogo" id="lteamlogo" src="static/teamlogos/rock.png"> 
             <div class="divider defenders_line" id="team0_line"></div>
         </box>
 
         <box class ="rheaderbox_side"></box>
         <box class="rheaderbox d-flex justify-content-center">
-            <div class="rheader_background"></div>
+            <div class="rheader_background" id = "rteambg"></div>
             <div class="divider attackers_line" id="team1_line"></div>
-            <img class="teamlogo" id="rteamlogo" src="test_team1logo.png"> 
+            <img class="teamlogo" id="rteamlogo" src="static/teamlogos/gru.png"> 
             <h2 id="team1_name">GRU</h2>
         </box>
 
@@ -43,7 +44,7 @@
             <h3 id="roundCount">ROUND 12</h3>
         </box>
 
-        <img class="spike" src="spike.png">
+        <img class="spike" src="static/spikeAndShields/spike.png">
         
         
         <!--side HUDs-->
