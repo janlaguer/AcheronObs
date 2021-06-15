@@ -51,7 +51,7 @@ function updateLogo(json) {
             i = 'r'
         }
         document.getElementById(`${i}teamlogo`).src = `static/teamlogos/${json.teams[x].logo}`
-        document.getElementById(`${i}teambg`).src = `static/teamlogos/${json.teams[x].logo}`
+        // document.getElementById(`${i}teambg`).src = `static/teamlogos/${json.teams[x].logo}`
     }
 }
 
