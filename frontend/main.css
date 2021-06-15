@@ -321,7 +321,7 @@ h3 {
 }
 
 .progress {
-    position:relative;
+    position:absolute;
     border-radius:0px;
     top:45px;
     height:31px;
@@ -385,4 +385,31 @@ h3 {
 
 .health-right {
     right: 189px;
+}
+
+.dot {
+    position:absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 3px solid grey;
+    display: inline-block;
+    z-index: 5
+  }
+
+.dot-atk{
+    top:-5px;
+    left:-10px;
+}
+.dot-def{
+    top:-5px;
+    right: -10px;
+}
+
+.ult_not{
+    background-color:#0f1923;
+}
+
+.ult_yes{
+    background-color:#2EDE03;
 }

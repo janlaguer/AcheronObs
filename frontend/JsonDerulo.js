@@ -28,6 +28,17 @@ function updatePlayers(json) {
 			else{
 				box.classList.remove("dead")
 			}
+            
+            var ult = document.getElementById(`t${x}p${i}ult`)
+
+            if (json.teams[x].players[i].ultimate_up && ult.classList.contains('ult_not')){
+                ult.classList.remove('ult_not')
+                ult.classList.add("ult_yes")
+            }
+            else if(!json.teams[x].players[i].ultimate_up && ult.classList.contains('ult_yes')){
+                ult.classList.remove('ult_yes')
+                ult.classList.add("ult_not")
+            }
         }
     }
 }
