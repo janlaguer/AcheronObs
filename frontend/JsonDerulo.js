@@ -67,7 +67,7 @@ function updateRound(json) {
     document.getElementById('team1_score').innerHTML = num2
     document.getElementById('roundCount').innerHTML = `ROUND ${num1 + num2 + 1}`
 
-    if (num1 + num2 >= 13) {
+    if (json.teams[0].id == 1) {
         // get bool if team0 and team1 has specific classes
         var team0HasClass = $('#team0_line').hasClass('attackers_line');
         var team1HasClass = $('#team1_line').hasClass('defenders_line');
