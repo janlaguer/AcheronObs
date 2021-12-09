@@ -1,5 +1,5 @@
 function getMain () {
-    return fetch('http://26.227.230.60:8000/api/match/get_match')
+    return fetch('http://localhost:8000/api/match/get_match')
 }
 
 function updatePlayers(json) {
@@ -53,6 +53,11 @@ function updateLogo(json) {
         document.getElementById(`${i}teamlogo`).src = `static/teamlogos/${json.teams[x].logo}`
         // document.getElementById(`${i}teambg`).src = `static/teamlogos/${json.teams[x].logo}`
     }
+}
+
+function updateTeamName(json) {
+    document.getElementById(`team0_name`).innerHTML = json.teams[0].short_name.toUpperCase()
+    document.getElementById(`team1_name`).innerHTML = json.teams[1].short_name.toUpperCase()
 }
 
 function updateRound(json) {
@@ -121,6 +126,7 @@ function mainLoop() {
     getMain().then(response => {
         return response.json();
     }).then(response => {
+        updateTeamName(response)
         updateLogo(response);
         updateRound(response);
         updateSpike(response);
