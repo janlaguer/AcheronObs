@@ -9,6 +9,7 @@ from .schemas import Match
 from .spike_logic import is_spike_planted
 from .ultimate_logic import is_ultimate_up
 from .score_logic import get_score
+from .side_logic import is_side
 
 
 with open('ressource/config.json') as config_file:
@@ -50,7 +51,12 @@ async def edit_match(new_match: Match):
 async def get_match():
     match.spike_status = await is_spike_planted(cap)
     match.teams[0].game_score = await get_score(settings['score_left_position'], cap)
+    match.teams[0].id = await is_side(cap)
     match.teams[1].game_score = await get_score(settings['score_right_position'], cap)
+    if match.teams[0].id == 0:
+        match.teams[1].id = 1
+    else:
+        match.teams[1].id = 0
     for i in range(0, 5):
         match.teams[0].players[i].hp = await get_healthpercent(settings['team_1'][f'player_{i}_position'], cap)
         match.teams[0].players[i].ultimate_up = await is_ultimate_up(settings['team_1'][f'player_{i}_position'], cap)
