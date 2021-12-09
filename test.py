@@ -1,11 +1,18 @@
-import time
-from pprint import pprint
-import requests
+import cv2
+import json
 
-url = "http://localhost:8000/api/match/get_match/"
+with open('backendv2/ressource/config.json') as config_file:
+    settings = json.load(config_file)
+
+xcap = cv2.VideoCapture(settings['camera_index'], cv2.CAP_DSHOW)
+xcap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+xcap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
 while True:
-    result = requests.get(url)
-    result = result.json()
-    pprint(result)
-    time.sleep(2)
+    ret, frame = xcap.read()
+    cv2.imshow('frame', frame)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+xcap.release()
+cv2.destroyAllWindows
