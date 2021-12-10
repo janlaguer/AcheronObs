@@ -38,13 +38,13 @@ async def get_score(team, cap) -> str:
     frame = await clean_frame(frame)
 
     custom_config = r'-c tessedit_char_whitelist=0123456789'
-    score = await loop.run_in_executor(None, lambda: image_to_string(frame, config=custom_config))
+    score = await loop.run_in_executor(None, lambda: image_to_string(frame, lang='eng', config=custom_config))
     score = score.replace('\n', '').replace('\f', '')
 
     if not score:
         frame = await crop_score(team, cap)
         custom_config = r'--oem 3 --psm 13 -c tessedit_char_whitelist=0123456789 outputbase digit'
-        score = await loop.run_in_executor(None, lambda: image_to_string(frame, config=custom_config))
+        score = await loop.run_in_executor(None, lambda: image_to_string(frame, lang='eng', config=custom_config))
         score = score.replace('\n', '').replace('\f', '')
         if not score:
             score = "0"
@@ -68,4 +68,4 @@ if __name__ == '__main__':
     import asyncio
 
     while True:
-        print(asyncio.run(get_score(settings['score_left_position'], xcap)))
+        print(asyncio.run(get_score(settings['score_right_position'], xcap)))

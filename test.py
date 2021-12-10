@@ -1,5 +1,7 @@
 import cv2
 import json
+import numpy as np
+import asyncio
 
 with open('backendv2/ressource/config.json') as config_file:
     settings = json.load(config_file)
