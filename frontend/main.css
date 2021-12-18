@@ -1,6 +1,7 @@
 body {
     background-color: rgba(0, 0, 0, 0.1) !important; 
     margin: 0px auto; 
+    overflow: hidden;
 }
 
 h1 {
@@ -412,4 +413,14 @@ h3 {
 
 .ult_yes{
     background-color:#2EDE03;
+}
+
+#leftboxes {
+    position: relative;
+    transition: left 1s
+}
+
+#rightboxes {
+    position: relative;
+    transition: right 1s
 }

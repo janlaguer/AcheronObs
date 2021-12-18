@@ -122,12 +122,23 @@ function updateSpike(json) {
     }
 }
 
+function updatePreRound(json) {
+    if (json.id == 1) {
+        document.querySelector('#leftboxes').style.left = "-50em"
+        document.querySelector('#rightboxes').style.right = "-50em"
+    } else {
+        document.querySelector('#leftboxes').style.left = "0em"
+        document.querySelector('#rightboxes').style.right = "0em"
+    }
+}
+
 function mainLoop() {
     getMain().then(response => {
         return response.json();
     }).then(response => {
         updateTeamName(response)
         updateLogo(response);
+        updatePreRound(response);
         updateRound(response);
         updateSpike(response);
         updatePlayers(response);
