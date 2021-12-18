@@ -1,8 +1,7 @@
 import json
 from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
-
-from fastapi import FastAPI
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 import cv2
 from .hp_logic import get_healthpercent
 from .schemas import Match
@@ -27,7 +26,9 @@ cap = cv2.VideoCapture(settings['camera_index'], cv2.CAP_DSHOW)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
-match = Match(id=1, spike_status=False,
+ispreround = 0
+
+match = Match(id=ispreround, spike_status=False,
               teams=[{'id': i,
                       'full_name': f'{match[f"team{i}"]["full_name"]}',
                       'short_name': f'{match[f"team{i}"]["short_name"]}',
@@ -49,6 +50,7 @@ async def edit_match(new_match: Match):
 
 @app.get("/api/match/get_match/")
 async def get_match():
+    match.id = ispreround
     match.spike_status = await is_spike_planted(cap)
     match.teams[0].game_score = await get_score(settings['score_left_position'], cap)
     match.teams[0].id = await is_side(cap)
@@ -65,3 +67,23 @@ async def get_match():
         match.teams[1].players[i].hp = await get_healthpercent(settings['team_2'][f'player_{i}_position'], cap)
     return match
 
+@app.websocket("/ws")
+async def websocket_endpoint(websocket: WebSocket):
+    global ispreround
+    print("Accepting connection")
+    await websocket.accept()
+    await websocket.send_json({"preround":f"{ispreround}"})
+    print(f'Accepted {websocket}')
+    try:
+        while True:
+            await websocket.receive_text() #button is pressed from controller
+
+            if ispreround == 0:
+                ispreround = 1
+            else:
+                ispreround = 0
+
+            await websocket.send_json({"preround":f"{ispreround}"})
+
+    except WebSocketDisconnect:
+        print("disconnected")
