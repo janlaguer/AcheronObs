@@ -1,4 +1,5 @@
 import json
+from typing import List
 from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
@@ -27,6 +28,7 @@ cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
 ispreround = 0
+roundwinner = None
 
 match = Match(id=ispreround, spike_status=False,
               teams=[{'id': i,
@@ -39,6 +41,28 @@ match = Match(id=ispreround, spike_status=False,
                                    'display_name': f'{match[f"team{i}"][f"player{x}"]["gamename"]}'} for x in range(0, 5)]
                       } for i in range(0, 2)]
               )
+
+
+class ConnectionManager:
+    def __init__(self):
+        self.active_connections: List[WebSocket] = []
+
+    async def connect(self, websocket: WebSocket):
+        await websocket.accept()
+        self.active_connections.append(websocket)
+
+    def disconnect(self, websocket: WebSocket):
+        self.active_connections.remove(websocket)
+
+    async def send_personal_message(self, message: str, websocket: WebSocket):
+        await websocket.send_text(message)
+
+    async def broadcast(self, message):
+        for connection in self.active_connections:
+            await connection.send_json(message)
+
+
+manager = ConnectionManager()
 
 
 @app.post("/api/match/edit_match")
@@ -67,23 +91,34 @@ async def get_match():
         match.teams[1].players[i].hp = await get_healthpercent(settings['team_2'][f'player_{i}_position'], cap)
     return match
 
-@app.websocket("/ws")
-async def websocket_endpoint(websocket: WebSocket):
+@app.websocket("/ws/{client}")
+async def websocket_endpoint(websocket: WebSocket, client: str):
     global ispreround
-    print("Accepting connection")
-    await websocket.accept()
-    await websocket.send_json({"preround":f"{ispreround}"})
-    print(f'Accepted {websocket}')
+    global roundwinner
+    global match
+    await manager.connect(websocket)
+    if client == "controller":
+        await websocket.send_json({"preround":f"{ispreround}", "Teams": [match.teams[0].short_name, match.teams[1].short_name]})
     try:
         while True:
-            await websocket.receive_text() #button is pressed from controller
+            event = await websocket.receive_text() #button is pressed from controller
+            event = json.loads(event)
 
-            if ispreround == 0:
-                ispreround = 1
-            else:
-                ispreround = 0
+            if event['event'] == 'togglePreround':
+                if ispreround == 0:
+                    ispreround = 1
+                else:
+                    ispreround = 0
 
-            await websocket.send_json({"preround":f"{ispreround}"})
+                await websocket.send_json({"preround":f"{ispreround}"})
+
+            elif event['event'] == 'winEvent':
+                roundwinner = event['winner']
+
+            if roundwinner != None:
+                await manager.broadcast({'winner':roundwinner, 'round': match.teams[0].game_score + match.teams[1].game_score})
+                roundwinner = None
 
     except WebSocketDisconnect:
+        manager.disconnect(websocket)
         print("disconnected")
